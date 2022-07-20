@@ -1,12 +1,18 @@
 ---
 # file for test ansbibe playbook for aci tenant
-- name: Add a new tenant
-  cisco.aci.aci_tenant:
-    host: "{{ansible_host}}"
-    username: "{{ username }}"
-    password: "{{ password }}"
-    validate_certs: no
-    tenant: "Fabios_Tenant"
-    description: "WLAN_tenant"
-    state: present
-  delegate_to: localhost
+- name: Play Create the Demo Tenant
+  hosts: all
+  gather_facts: no
+######
+
+  tasks:
+   - name: Add a new tenant
+     aci_tenant:
+       host: "{{ansible_host}}"
+       username: "{{ username }}"
+       password: "{{ password }}"
+       validate_certs: no
+       tenant: "Fabios_Tenant"
+       description: "WLAN_tenant"
+       state: present
+     delegate_to: localhost

@@ -9,7 +9,7 @@
     cisco.aci.aci_tenant:
       host: "{{ansible_host}}"
       username: admin
-      password: "{{ password }}"
+      password: !v3G@!4@Y
       validate_certs: no
       tenant: "Fabios_Tenant"
       description: "WLAN_tenant"

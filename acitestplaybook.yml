@@ -8,8 +8,8 @@
   - name: Add a new tenant
     cisco.aci.aci_tenant:
       host: "{{ansible_host}}"
-      username: admin
-      password: !v3G@!4@Y
+      username: "{{ username }}"
+      password: "{{ password }}"
       validate_certs: no
       tenant: "Fabios_Tenant"
       description: "WLAN_tenant"

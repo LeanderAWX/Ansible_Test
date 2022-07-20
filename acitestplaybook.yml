@@ -7,7 +7,7 @@
 
   tasks:
    - name: Add a new tenant
-     aci_tenant:
+     cisco.aci.aci_tenant:
        host: "{{ansible_host}}"
        username: "{{ username }}"
        password: "{{ password }}"

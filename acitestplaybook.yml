@@ -16,6 +16,6 @@
       state: present
     delegate_to: localhost
 
-  - name: Test task in roles
+  - name: Test task in tenants
     ansible.builtin.debug:
-      msg: "Test"
+      msg: "tenant done"

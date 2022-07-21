@@ -15,7 +15,12 @@
       description: "WLAN_tenant"
       state: present
     delegate_to: localhost
+    register: log
 
   - name: Test task in tenants
     ansible.builtin.debug:
       msg: "tenant done"
+
+  - debug: var=log
+
+  

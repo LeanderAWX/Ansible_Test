@@ -15,3 +15,7 @@
       description: "WLAN_tenant"
       state: present
     delegate_to: localhost
+
+  - name: Test task in roles
+    ansible.builtin.debug:
+      msg: "Test"

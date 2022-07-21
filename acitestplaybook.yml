@@ -20,7 +20,7 @@
   - name: Test task in tenants
     ansible.builtin.debug:
       msg: "tenant done"
-
+# register with debug prints return values for the tenant
   - debug: var=log
 
   
